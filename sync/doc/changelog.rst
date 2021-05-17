@@ -1,3 +1,13 @@
+`2.1.2`
+-------
+
+- **Fix:** error on adding new webhook
+
+`2.1.1`
+-------
+
+- **Fix:** resolving name conflicts with the demo project
+
 `2.1.0`
 -------
 
