@@ -43,7 +43,7 @@ Developer Hints
 Public webhook address
 ----------------------
 
-If you run Odoo locally and need to test webhook, your Odoo server should be available via public URL. You can either use specialized services like https://ngrok.com/ or make proxing via ssh tunneling as described in the next section. Once it's done set corresponding ``https://...`` value for ``web.base.url`` parameter (menu ``[[ Settings ]] >> System Parameters``). Also, you should set any value to  `web.base.url.freeze <https://odoo-source.com/?q=web.base.url.freeze&i=nope&files=&excludeFiles=po%24%7Cpot%24%7Cyml%24%7Cyaml%24%7Ccss%24%7C%2Fstatic%2Flib%2F&repos=odoo>`__to avoid automatic change of ``web.base.url``.
+If you run Odoo locally and need to test webhook, your Odoo server should be available via public URL. You can either use specialized services like https://ngrok.com/ or make proxing via ssh tunneling as described in the next section. Once it's done set corresponding ``https://...`` value for ``web.base.url`` parameter (menu ``[[ Settings ]] >> System Parameters``). Also, you should set any value to  `web.base.url.freeze <https://odoo-source.com/?q=web.base.url.freeze&i=nope&files=&excludeFiles=po%24%7Cpot%24%7Cyml%24%7Cyaml%24%7Ccss%24%7C%2Fstatic%2Flib%2F&repos=odoo>`__ to avoid automatic change of ``web.base.url``.
 
 SSH tunneling
 ~~~~~~~~~~~~~
