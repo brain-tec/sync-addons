@@ -62,7 +62,7 @@ SSH tunneling
 
       ssh user@yourserver.example -R 0.0.0.0:8069:localhost:8069
 
-Now you use ``http://yourserver.example:8069`` as a value for ``web.base.url`` in Odoo.
+Now you can use ``http://yourserver.example:8069`` as a value for ``web.base.url`` in Odoo.
 
 Few more steps requires to use https connection (e.g. telegram api works with https only). In your server do as following:
 
