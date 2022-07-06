@@ -16,14 +16,14 @@
     "external_dependencies": {"python": [], "bin": []},
     "data": ["views/mail_channel_views.xml"],
     "demo": [],
-    "qweb": [
-        "static/src/components/discuss_sidebar/discuss_sidebar.xml",
-        "static/src/components/discuss_sidebar_item/discuss_sidebar_item.xml",
-    ],
     "assets": {
         "web.assets_backend": [
-            "/multi_livechat/static/src/components/discuss_sidebar/discuss_sidebar.js",
-            "/multi_livechat/static/src/models/messaging_initializer/messaging_initializer.js",
+            "multi_livechat/static/src/models/messaging_initializer/messaging_initializer.js",
+            "multi_livechat/static/src/models/discuss/discuss.js",
+            "multi_livechat/static/src/components/discuss/discuss.js",
+        ],
+        "web.assets_qweb": [
+            "multi_livechat/static/src/components/discuss_sidebar/discuss_sidebar.xml",
         ],
     },
     "post_load": None,
