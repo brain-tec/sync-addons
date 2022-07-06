@@ -1,3 +1,4 @@
+// TODO: to delete
 odoo.define(
     "multi_livechat/static/src/mail/components/discuss_sidebar/discuss_sidebar.js",
     function (require) {
