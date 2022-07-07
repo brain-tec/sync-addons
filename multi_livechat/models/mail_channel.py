@@ -58,28 +58,6 @@ class MailChannel(models.Model):
                 record.is_chat = True
 
     @api.model
-    def channel_fetch_slot(self):
-        values = super(MailChannel, self).channel_fetch_slot()
-        domain = [("channel_type", "not in", ODOO_CHANNEL_TYPES)]
-        pinned_channels = (
-            self.env["mail.channel.partner"]
-            .search(
-                [
-                    ("partner_id", "=", self.env.user.partner_id.id),
-                    ("is_pinned", "=", True),
-                ]
-            )
-            .mapped("channel_id")
-        )
-        domain += [("id", "in", pinned_channels.ids)]
-        channel_infos = self.search(domain).channel_info()
-        for info in channel_infos:
-            key = info["channel_type"]
-            values.setdefault(key, [])
-            values[key].append(info)
-        return values
-
-    @api.model
     def multi_livechat_info(self):
         field = self.env["mail.channel"]._fields["channel_type"]
         return {
