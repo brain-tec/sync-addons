@@ -18,8 +18,13 @@ registerInstancePatchModel(
         },
         getMLChatCategories() {
             // CategoryMLChat_NAME -> field
-            // TODO
-            return {};
+            const res = {};
+            _.each(this.__values, (value, key) => {
+                if (key.startsWith("categoryMLChat_")) {
+                    res[key] = value;
+                }
+            });
+            return res;
         },
     }
 );
