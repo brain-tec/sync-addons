@@ -2,7 +2,7 @@
 # License MIT (https://opensource.org/licenses/MIT).
 from odoo import api, fields, models
 
-ODOO_CHANNEL_TYPES = ["chat", "channel", "livechat"]
+ODOO_CHANNEL_TYPES = ["chat", "channel", "livechat", "group"]
 
 
 class MailChannel(models.Model):
@@ -24,7 +24,6 @@ class MailChannel(models.Model):
             "public": "groups",
             "group_public_id": self.env.ref("base.group_user").id,
             "channel_type": channel_type,
-            "email_send": False,
             "name": channel_name,
         }
 

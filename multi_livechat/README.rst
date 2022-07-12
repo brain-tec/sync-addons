@@ -29,8 +29,8 @@ MODULE/__manifest__.py
     "depends": ["multi_livechat"],
     "assets": {
         "web.assets_backend": [
-            "/MODULE/static/src/models/discuss/discuss.js",
-            "/MODULE/static/src/models/discuss_sidebar_category/discuss_sidebar_category.js",
+            "MODULE/static/src/models/discuss/discuss.js",
+            "MODULE/static/src/models/discuss_sidebar_category/discuss_sidebar_category.js",
         ],
     },
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="mail_channel_icq_demo" model="mail.channel">
+        <field name="name">Ivan Kropotkin</field>
+        <field name="channel_type">multi_livechat_icq_demo</field>
+        <field name="public">groups</field>
+    </record>
+</odoo>
