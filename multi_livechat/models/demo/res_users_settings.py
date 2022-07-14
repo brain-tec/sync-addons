@@ -6,6 +6,6 @@ from odoo import fields, models
 class ResUsersSettings(models.Model):
     _inherit = "res.users.settings"
 
-    is_discuss_sidebar_category_icq_demo_open = fields.Boolean(
-        "Is category ICQ (Demo) open", default=True
+    is_discuss_sidebar_category_echo_demo_open = fields.Boolean(
+        "Is category ECHO (Demo) open", default=True
     )
