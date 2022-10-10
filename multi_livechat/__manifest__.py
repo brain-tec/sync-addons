@@ -2,7 +2,7 @@
 # License MIT (https://opensource.org/licenses/MIT).
 
 {
-    "name": """Multichannel Live Chat""",
+    "name": """Customer Chat""",
     "summary": """Be in touch with your partners via any supported channels (Telegram, WhatsApp, Instragram, etc.)""",
     "category": "Marketing",
     "images": ["images/multi_livechat.jpg"],
@@ -10,7 +10,7 @@
     "application": False,
     "author": "IT Projects Labs, Ivan Yelizariev",
     "support": "help@itpp.dev",
-    "website": "https://t.me/sync_studio",
+    "website": "https://itpp.dev/",
     "license": "Other OSI approved licence",  # MIT
     "depends": ["mail"],
     "external_dependencies": {"python": [], "bin": []},
