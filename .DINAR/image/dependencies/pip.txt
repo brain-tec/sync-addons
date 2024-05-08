@@ -5,3 +5,5 @@ swagger_spec_validator
 # Sync Studio
 pyTelegramBotAPI
 viberbot
+markdown==3.6
+pyyaml
