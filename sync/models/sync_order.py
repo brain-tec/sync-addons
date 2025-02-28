@@ -18,7 +18,7 @@ class SyncOrder(models.Model):
     )
     sync_job_id = fields.Many2one("sync.job")
     description = fields.Html(related="sync_task_id.sync_order_description")
-    # DEPRECATED. Use line_ids.record_id instead
+    # DEPRECATED. Use line_ids.record_ref instead
     record_id = fields.Reference(
         string="Blackjack",
         selection="_selection_record_id",
@@ -63,10 +63,10 @@ class SyncOrderLine(models.Model):
     _name = "sync.order.line"
     _description = "Sync Order Records"
 
-    sync_order_id = fields.Many2one("sync.order")
-    record_id = fields.Reference(
+    sync_order_id = fields.Many2one("sync.order", required=True)
+    record_ref = fields.Reference(
         string="Linked Record",
-        selection="_selection_record_id",
+        selection="_selection_record_model",
         help="Optional extra information to perform this task",
     )
     state = fields.Selection(
@@ -82,7 +82,7 @@ class SyncOrderLine(models.Model):
     value = fields.Char("Extra Input")
     result = fields.Char("Result")
 
-    def _selection_record_id(self):
+    def _selection_record_model(self):
         mm = self.sync_order_id.sync_task_id.sync_order_model_id
         if not mm:
             return []
