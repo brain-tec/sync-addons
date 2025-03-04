@@ -9,7 +9,6 @@
             <tree>
                 <field name="sync_task_id" />
                 <field name="name" />
-                <field name="record_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -32,7 +31,7 @@
                         string="Refresh"
                         name="action_refresh"
                         type="object"
-                        invisible="state != 'open'"
+                        invisible="state == 'draft'"
                     />
                     <button
                         string="Cancel"
@@ -60,16 +59,17 @@
                         </group>
                         <group>
                             <field name="sync_job_id" readonly="1" />
+                            <field name="sync_job_state" readonly="1" />
                         </group>
                     </group>
                     <notebook>
                         <page string="Linked Records">
                             <field name="line_ids">
                                 <tree editable="bottom">
-                                    <field name="record_id" />
+                                    <field name="record_ref" />
                                     <field name="value" />
-                                    <field name="state" readonly="1" />
                                     <field name="result" readonly="1" />
+                                    <field name="state" readonly="1" />
                                 </tree>
                             </field>
                         </page>
